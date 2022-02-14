@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>In Place</title>
+ 
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+      * {
+        margin: 0%;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+      }
+      nav {
+        height: 80px;
+        width: 100%;
+        background: #34495e;
+        position: fixed;
+       z-index: +1;
+      }
+      .title {
+        font-size: 35px;
+        font-weight: bold;
+        color: white;
+        padding: 0 100px;
+        padding-left: 80px;
+        line-height: 80px;
+      }
+      #logo {
+        line-height: 80px;
+        font-size: 40px;
+        margin-left: 50px;
+        color: white;
+      }
+      nav ul {
+        float: right;
+        margin-right: 40px;
+      }
+      nav li {
+        display: inline-block;
+        margin: 0 8px;
+        line-height: 80px;
+      }
+      nav .nav-btn {
+        color: white;
+        font-size: 18px;
+        text-transform: uppercase;
+        border: 1px solid transparent;
+        padding: 7px 10px;
+        border-radius: 3px;
+      }
+      .active,
+      .nav-btn:hover {
+        border: 1px solid white;
+        transition: 0.5s;
+      }
+      nav #icon {
+        color: white;
+        font-size: 30px;
+        line-height: 80px;
+        float: right;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+
+    
+      @media (max-width: 1048px) {
+        .title {
+          font-size: 32px;
+          padding-left: 60px;
+        }
+        #logo {
+          font-size: 35px;
+        }
+        nav ul {
+          margin-right: 20px;
+        }
+        nav .nav-btn {
+          font-size: 17px;
+        }
+      }
+      @media (max-width: 909px) {
+        nav #icon {
+          display: block;
+        }
+        nav ul {
+          position: fixed;
+          width: 100%;
+          height: 40vh;
+          background: #2f3640;
+          top: 80px;
+          left: 0;
+          text-align: center;
+          display: none;
+        }
+        nav li {
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+        nav .nav-btn {
+          font-size: 20px;
+        }
+        .active,
+        .nav-btn:hover {
+          border: none;
+          color: #3498db;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <i class="far fa-clipboard" id="logo"></i>
+      <label class="title" style="font-family: Fredericka the Great"
+        >IN PLACE</label
+      >
+      <ul id="navbar">
+        <li><a href="#why" class="active nav-btn">Why Notes?</a></li>
+        <li><a href="#habits" class="nav-btn">Habits</a></li>
+        <li><button class="glow-on-hover" style="font-size: 16px;" id="add">Add Notes</button></li>
+      </ul>
+      <label id="icon">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
+    <div class="notes"></div>
+    <div id="why">
+      <h1 class="why-notes">Why make notes?</h1>
+      <p>If you cannot remember what you had for lunch two weeks ago, what makes you think you are going to remember the most important points from your staff meeting, presentation or seminar? Taking notes gives you the opportunity to highlight key points and details that might otherwise slip your mind, and you never know when these fragments of knowledge will come in handy!</p></div>
+      <div class="card l">
+        <h2>It relieves stress</h2>
+        <p>When your mind is swarming with loose ends to tie, writing them down helps you reduce your cluttered thoughts, which reduces stress. It is also a great way to set aside your overwhelm so that you can focus on the task at hand.</p>
+      </div>
+      <div class="card r">
+        <h2>You create quality reference materials.</h2>
+        <p>If you want to become the best in your field, taking notes is your ticket to making it happen. As you build your career and keep track of what you are learning, you will have easy access to your very own refresher courses.</p>
+      </div>
+      <div class="card l">
+        <h2>It improves the quality of everything you do.</h2>
+        <p>Whether you are putting together a report for work or tweaking a recipe for your next social gathering, taking notes helps you improve every project, every hobby, and every event you participate in. It is a detail-oriented way to process your learning experience, which eventually leads to expert status at work or satisfied guests at home.</p>
+      </div>
+      <div class="card r">
+        <h2>Some other benefits.</h2>
+        <ol>
+          <li>It helps keep your schedule in tact.</li>
+          <li>It is easy to convert your notes into a to-do list.</li>
+          <li>You can share your notes with co-workers and friends.</li>
+          <li>Taking notes makes you look good.</li>
+        </ol>
+      </div>
+    <div id="habits">
+      <h2 class="habit">Habits for Productivity</h2>
+<ol>
+  <li>Do not multitask</li>
+  <p>Research has shown that multitasking significantly slows you down. You might think you are getting more done, but jumping between jobs actually hinders your cognitive processing. The most productive people spend several hours on a single task which allows them to get into a deep state of mental concentration, producing the best possible results.</p>
+  <li>Eliminate distractions</li>
+  <p>Highly productive people know the danger of unwanted distractions, and take decisive steps to shut them out. If you are seated in a noisy environment do not be afraid to wear headphones, or move away from that gossipy co-worker. Minimise distractions on your screen by closing browser tabs. And above all, put your smartphone out of sight!</p>
+  <li>Do not deterred by failure</li>
+  <cite>"Inaction breeds doubt and fear. Action breeds confidence and courage. If you want to conquer fear, do not sit home and think about it. Go out and get busy."</cite> - Dale Carnegie
+  <p>The most productive people are not afraid of making mistakes. They take action without over-analysing the consequences, and treat each failure as an opportunity for improvement. Taking risks is essential if you want to evolve into a productive, efficient and confident worker. </p>
+  <li>Take small steps</li>
+  <p>The beginning of a huge project always feels like the best time to clean out your desk, organise your photo library or make origami out of post-it notes. The bigger the project is, the more we procrastinate. That is why the smartest workers break monster jobs down into small, achievable steps. Having a comprehensive list to power through does wonders for your motivation. </p>
+</ol>
+    </div>
+    
+    <script>
+      document.getElementById("icon").addEventListener("click", () => {
+        const navbar = document.getElementById("navbar");
+        if (navbar.style.display == "block") {
+          navbar.style.display = "none";
+        } else navbar.style.display = "block";
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
